@@ -25,7 +25,7 @@ interface CliArgs {
 
 function printUsage(): void {
 	const usage = `
-Usage: obsidian-clipper <url> [options]
+Usage: a-better-obsidian-clipper <url> [options]
 
 Options:
   -t, --template <path>        Path to template JSON file or directory (required)

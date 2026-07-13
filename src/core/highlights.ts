@@ -974,7 +974,7 @@ async function exportCurrentContext() {
 
 	const browserType = await detectBrowser();
 	const timestamp = dayjs().format('YYYYMMDDHHmm');
-	const fileName = `obsidian-web-clipper-highlights-${timestamp}.json`;
+	const fileName = `a-better-obsidian-clipper-highlights-${timestamp}.json`;
 
 	if (browserType === 'safari' || browserType === 'mobile-safari') {
 		if (navigator.share) {
