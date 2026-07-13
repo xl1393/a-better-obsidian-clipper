@@ -108,6 +108,27 @@ label {
 	align-items: center;
 }
 
+.input-with-copy {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+	width: 100%;
+
+	> input {
+		flex: 1 1 auto;
+		min-width: 0;
+	}
+
+	.copy-input-button {
+		flex: 0 0 auto;
+		cursor: pointer;
+
+		&.is-copied {
+			color: var(--color-green, var(--interactive-accent));
+		}
+	}
+}
+
 .setting-items {
 	background-color: var(--settings-items-backgroud);
 	border-radius: var(--radius-m);

@@ -2,6 +2,7 @@ import { generalSettings, saveSettings } from '../utils/storage-utils';
 import { testGithubConnection } from '../utils/github-uploader';
 import { getMessage } from '../utils/i18n';
 import { debounce } from '../utils/debounce';
+import { attachCopyButton } from '../utils/copy-input-button';
 
 function initializeTextInput(
 	inputId: string,
@@ -58,6 +59,9 @@ async function handleTestConnection(): Promise<void> {
 export async function initializeGithubSettings(): Promise<void> {
 	initializeTextInput('github-token', 'token');
 	initializeTextInput('github-repo', 'repo');
+
+	// Add a copy button to the token field (works even though it is masked)
+	attachCopyButton('github-token');
 
 	const testButton = document.getElementById('github-test-connection');
 	if (testButton) {

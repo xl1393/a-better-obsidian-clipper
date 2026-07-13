@@ -2,6 +2,7 @@ import { generalSettings, saveSettings } from '../utils/storage-utils';
 import { testR2Connection } from '../utils/r2-config';
 import { getMessage } from '../utils/i18n';
 import { debounce } from '../utils/debounce';
+import { attachCopyButton } from '../utils/copy-input-button';
 
 function initializeSettingToggle(
 	inputId: string,
@@ -82,6 +83,10 @@ export async function initializeR2Settings(): Promise<void> {
 	initializeTextInput('r2-secret-access-key', 'secretAccessKey');
 	initializeTextInput('r2-bucket-name', 'bucketName');
 	initializeTextInput('r2-public-base-url', 'publicBaseUrl');
+
+	// Add copy buttons to the credential fields (works even for masked inputs)
+	attachCopyButton('r2-access-key-id');
+	attachCopyButton('r2-secret-access-key');
 
 	// Initialize test connection button
 	const testButton = document.getElementById('r2-test-connection');
