@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist_firefox/
+dist_safari/
+dev/
+dev_firefox/
+dev_safari/
+builds/
+
+# Packaged extensions and signing keys (never commit private keys)
+*.crx
+*.pem
+*.xpi
+*.zip
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# Xcode
+xcode/**/xcuserdata/
+xcode/**/*.xcuserstate
+xcode/**/build/
+DerivedData/
